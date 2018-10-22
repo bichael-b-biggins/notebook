@@ -2,11 +2,12 @@ import os
 
 TOPDIR = './python'
 
-def generate_file_header(filename):
-    return '\\section{{{}}}\n\\begin{{verbatim}}'.format(filename)
+def generate_file_header(filename, filepath):
+    return ('\\section{{{}}}\n'.format(filename) +
+            r'\begin{lstlisting}[language=Python]' + '\n')
 
 def generate_file_footer(filename):
-    return '\\end{{verbatim}}'.format(filename)
+    return r'\end{lstlisting}'
 
 def main():
     out = []
@@ -24,7 +25,7 @@ def main():
                         line.lower().startswith('##')):
                         continue
                     code.append(line)
-            codeblock = (generate_file_header(filename) +
+            codeblock = (generate_file_header(filename, d) +
                          '\n'.join(code) +
                          generate_file_footer(filename))
             out.append(codeblock)
