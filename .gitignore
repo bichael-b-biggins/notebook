@@ -1,0 +1,5 @@
+content_*.tex
+*.log
+*.pdf
+*.toc
+*.aux
