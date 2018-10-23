@@ -3,3 +3,4 @@ content_*.tex
 *.pdf
 *.toc
 *.aux
+**/__pycache__
