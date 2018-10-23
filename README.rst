@@ -11,3 +11,10 @@ To build, run:
 .. code-block:: bash
 
     ./build.sh
+
+When writing, lines with the following format will be omitted:
+
+.. code-block:: python
+
+    ## These comments are good for attribution implementation choice notes. 
+    # TODO: These comments are good for notes for future changes.
