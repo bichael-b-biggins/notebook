@@ -3,7 +3,7 @@ import os
 TOPDIR = './python'
 
 def generate_file_header(filename, filepath):
-    return ('\\section{{{}}}\n'.format(filename) +
+    return ('\\section{{{}}}\n'.format(filepath) +
             r'\begin{lstlisting}[language=Python]' + '\n')
 
 def generate_file_footer(filename):
@@ -25,6 +25,8 @@ def main():
                     line = line.rstrip()
                     if (line.lower().startswith('# todo') or
                         line.lower().startswith('##')):
+                        continue
+                    if len(line) == 0:
                         continue
                     code.append(line)
             codeblock = (generate_file_header(filename, d) +

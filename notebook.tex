@@ -1,12 +1,19 @@
-\documentclass[a4paper, oneside, final]{article}
-\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\documentclass[fontsize=7pt]{scrartcl}
+\usepackage[top=0.75cm, bottom=0.75cm, left=1.8cm, right=1.8cm]{geometry}
 \usepackage{listings}
 \usepackage{verbatim}
+\usepackage{pdflscape}
+\usepackage{multicol}
 
 \begin{document}
+\begin{landscape}
+\begin{multicols}{2}
 
 \tableofcontents
 
 \input{content_python.tex}
+
+\end{multicols}
+\end{landscape}
 
 \end{document}
