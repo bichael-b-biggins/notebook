@@ -15,6 +15,8 @@ def main():
         for filename in files:
             if not filename.endswith('.py'):
                 continue
+            if filename.endswith('.test.py'):
+                continue
             d = os.path.join(path, filename)
             code = []
             with open(d) as f:
