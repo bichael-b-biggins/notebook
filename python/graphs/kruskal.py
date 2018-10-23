@@ -2,8 +2,8 @@
 ## Tested against kattis:minspantree
 
 # Kruskal's algorithm for minimum spanning tree.
-# Runs in time proportional to the number of edges. Unsuitable for heavily
-# connected graphs.
+# Runs in O(E*log(E)) time (equiv. O(E*log(V))), where E is the number of
+# edges and V is the number of vertices.
 # Includes Union-Find.
 parent = {}
 rank = {}

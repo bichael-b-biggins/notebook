@@ -9,7 +9,8 @@ def complex_dist(a, b):
 
 # Takes a list of points of the form complex(x, y).
 # Can be modified to take edge weights if the line marked #metric is changed.
-# Runs in time proportional to the number of vertices.
+# Runs in O(V*V) time, where V is the number of vertices.
+# TODO: Impl. with fibonacci heap/adj. list to get runtime of O(E + V*log(V)).
 def prims(N, points):
     cost = 0
     pq = [(0, 0)]
