@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 python3 generate.py
 pdflatex notebook.tex
 
