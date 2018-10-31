@@ -1,5 +1,5 @@
 # Taken from https://github.com/CianLR/judge-solutions/blob/d273867c04813a161ec888aecf47e5d6c2dc916a/kattis/freckles_prims.cc
-# Tested against Kattis:freckles
+## Tested against Kattis:freckles
 
 #include <math.h>
 #include <functional>
