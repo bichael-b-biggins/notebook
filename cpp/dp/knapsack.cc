@@ -9,6 +9,7 @@ struct Object {
   int i, value, weight;
 };
 
+// Runs in O(N * C).
 vector<int> Knapsack(int cap, const vector<Object> &objs) {
   vector<vector<int>> values(objs.size() + 1, vector<int>(cap + 1, 0));
   vector<vector<bool>> taken(objs.size(), vector<bool>(cap + 1, false));
